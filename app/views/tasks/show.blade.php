@@ -8,5 +8,5 @@
 		{{ $task->body }}
 	</article>
 
-	<p>{{ link_to('/tasks', 'Go Back') }}</p>
+	<p>{{ link_to('/', 'Go Back') }}</p>
 @stop
