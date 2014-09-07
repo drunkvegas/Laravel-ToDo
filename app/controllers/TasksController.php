@@ -9,8 +9,9 @@ class TasksController extends \BaseController {
 	 */
 	public function index()
 	{
-		// Fetch All Tasks
-		$tasks = Task::all();
+		$tasks = Task::with('user')->get();
+
+		// Load View
 		return View::make('tasks.index', ['tasks' => $tasks]);
 	}
 
